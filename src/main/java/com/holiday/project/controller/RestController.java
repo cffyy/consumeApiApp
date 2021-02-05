@@ -15,9 +15,14 @@ public class RestController {
     private EmployeeRepository employeeService;
 
 
-    @GetMapping(value = "/student")
-    public @ResponseBody
+    @GetMapping(value = "/welcome")
     String getTestData() {
-return employeeService.findAll().get(0).getFirstName();
+    String dbData = employeeService.findAll().get(0).getFirstName();
+    return "welcome";
+        }
+    @GetMapping(value = "/error")
+    String errorPage() {
+        String dbData = employeeService.findAll().get(0).getFirstName();
+        return "ERROR";
     }
-}
+    }
