@@ -5,17 +5,24 @@ import javax.persistence.*;
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee {
-@Id
+
 @Column(name = "first_name")
         private String firstName;
+    @Id
+@Column(name = "emp_num")
+    private String empNum;
 
-        public Employee() {}
+    public Employee() {}
 
-        public String getFirstName() {
+    public String getFirstName() {
             return firstName;
         }
 
-        public void setFirstName( String first_name ) {
+    public void setFirstName( String first_name ) {
             this.firstName = first_name;
         }
+
+    public String getEmpNum() { return empNum; }
+
+    public void setEmpNum(String empNum) { this.empNum = empNum; }
 }

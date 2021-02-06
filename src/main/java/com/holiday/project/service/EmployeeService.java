@@ -14,6 +14,7 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
 
     public List<Employee> list() {
+        employeeRepository.count();
         return employeeRepository.findAll();
     }
 }
