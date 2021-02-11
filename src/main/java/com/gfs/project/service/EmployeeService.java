@@ -1,9 +1,10 @@
-package com.holiday.project.service;
+package com.gfs.project.service;
 
-import com.holiday.project.repository.Employee;
-import com.holiday.project.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.gfs.project.repository.Employee;
+import com.gfs.project.repository.EmployeeRepository;
 
 import java.util.List;
 
@@ -18,5 +19,12 @@ public class EmployeeService {
     }
     public long count() {
         return employeeRepository.count();
+    }
+    public String add() {
+    	Employee entity = new Employee();
+    	entity.setEmpNum("3");
+    	entity.setFirstName("Monica");
+    	employeeRepository.save(entity);
+    	return "Add Successful";
     }
 }

@@ -1,4 +1,4 @@
-package com.holiday.project.repository;
+package com.gfs.project.repository;
 
 import javax.persistence.*;
 
